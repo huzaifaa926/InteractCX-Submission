@@ -30,8 +30,3 @@ async def read_root(request : Request):
 @app.get("/orderDetails")
 def order_details():
     return {"dispatched_date" : get_date()}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
